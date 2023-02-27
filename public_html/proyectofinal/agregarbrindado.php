@@ -67,8 +67,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <h2 class="mt-5">Crear Cliente</h2>
+                <div class="col-md-12 col-10">
+                    <h2 class="mt-5">Crear turno</h2>
                     <p>Porfavor complete el siguiente formulario.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 

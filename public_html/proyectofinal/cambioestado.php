@@ -5,7 +5,7 @@ require_once "config.php";
 // Define variables and initialize with empty values
 $cod_estado = "";
 $fecha_finalizacion = "";
-$fecha_inicio = "":
+$fecha_inicio = "";
 $cod_estado_err = "";
 $fecha_finalizacion_err = "";
 $fecha_inicio_err = "";
@@ -14,9 +14,9 @@ $fecha_inicio_err = "";
 if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDADO"])){
     // Get hidden input value
     $COD_SERVICIO_BRINDADO = $_POST["COD_SERVICIO_BRINDADO"];
-    $cod_estado = trim($_POST["COD_ESTADO"]);
-    $fecha_finalizacion = trim($_POST["FECHA_FINALIZACION"]);
-    $fecha_inicio = trim($_POST["FECHA_INICIO"]);
+    $cod_estado = trim($_POST["estado"]);
+    $fecha_finalizacion = trim($_POST["fecha_finalizacion"]);
+    $fecha_inicio = trim($_POST["fecha_inicio"]);
    
 
     // Check input errors before inserting in database
@@ -29,23 +29,26 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
             mysqli_stmt_bind_param($stmt,"issi", $param_cod_estado, $param_fecha_finalizacion, $param_fecha_inicio, $param_cod_servicio_brindado);
             
             //Seteamos los parametros
-            $param_cod_estado = $descripcion;
-            $param_fecha_finalizacion = $precio;
-            $param_fecha_inicio = $COD_SERVICIO;
-            $param_cod_servicio_brindado = $COD_SERVICIO_BRINDADO
+            $param_cod_estado = $cod_estado;
+            if ($fecha_finalizacion == ''){
+                $param_fecha_finalizacion = NULL;
+            }else{
+                $param_fecha_finalizacion = $fecha_finalizacion;
+            }
+            $param_fecha_inicio = $fecha_inicio;
+            $param_cod_servicio_brindado = $COD_SERVICIO_BRINDADO;
 
-            
 
             
             // Intentamos ejecutar la instruccion
             if(mysqli_stmt_execute($stmt)){
-                // Registro creado exitosamente, redireccionamos
+                // Registro modificado exitosamente, redireccionamos
                 
-                header("location: buscadorservicios.php");
+                header("location: PRUEBA.php");
                 
                 exit();
             } else{
-                
+                echo"error aca";
             }
         }
          
@@ -65,7 +68,7 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
         $sql = "SELECT * FROM SERVICIOS_BRINDADOS WHERE COD_SERVICIO_BRINDADO = ?";
         if($stmt = mysqli_prepare($DB_conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "i", $param_COD_SERVICIO);
+            mysqli_stmt_bind_param($stmt, "i", $param_COD_SERVICIO_BRINDADO);
             
             // Set parameters
             $param_COD_SERVICIO_BRINDADO = $COD_SERVICIO_BRINDADO;
@@ -118,17 +121,14 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
                     <h2 class="mt-5">Actualizar Estado del servicio</h2>
                     <p>Porfavor complete el siguiente formulario.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <div class="form-group" id= "estado">
-                            <label> Estado <select name="estado" class = "form-control <?php echo (!empty($estado_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $estado; ?>" >
-                            <?php
-                            $sql = "SELECT * FROM ESTADOS";
-                            $ejecutar = mysqli_query($DB_conn, $sql);
-                            ?>
-                            <?php foreach($ejecutar as $opciones): ?>
 
-                                <option value="<?php echo $opciones['COD_ESTADO']?>"> <?php echo $opciones['DESCRIPCION'] ?></option>
-                            <?php endforeach ?>
-                            </select></label>
+                        <div class="form-group" id= "estado">
+                            <label> Estado 
+                                <select name="estado" class = "form-control <?php echo (!empty($estado_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $estado; ?>" >
+                                    <option value="2">En proceso</option>
+                                    <option value="1">Finalizado</option>                 
+                                </select>
+                            </label>
                         </div>  
                         <div class="form-group">
                             <label>Fecha Inicio</label>
@@ -141,9 +141,9 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
                             <span class="invalid-feedback"><?php echo $fecha_finalizacion;?></span>
                         </div>
 
-                        <input type="hidden" name="COD_SERVICIO" value="<?php echo $COD_SERVICIO; ?>"/>
+                        <input type="hidden" name="COD_SERVICIO_BRINDADO" value="<?php echo $COD_SERVICIO_BRINDADO; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Aceptar">
-                        <a href="buscadorservicios.php" class="btn btn-secondary ml-2">Cancelar</a>
+                        <a href="PRUEBA.php" class="btn btn-secondary ml-2">Cancelar</a>
                     </form>
                 </div>
             </div>        

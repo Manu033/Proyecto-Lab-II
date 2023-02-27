@@ -60,3 +60,41 @@ function advertencia(e){
         }
       })
 }
+
+function redireccionar(exito, lugar){
+    if (exito == 1){
+        alert("Registro creado exitosamente");
+        if (lugar===1){
+            window.location.href = "clientes.php";
+        }else{
+            window.location.href = "serviciosvista.php";
+        }
+
+    } else{
+        alert("Algo ha ido mal, intente nuevamente");
+        if (lugar==1){
+            window.location.href = "clientes.php";
+        }else{
+            window.location.href = "serviciosvista.php";
+        }
+    }
+}
+
+function modificado(exito,lugar){
+    if (exito == 1){
+        alert("Registro modificado exitosamente");
+        if (lugar===1){
+            window.location.href = "clientes.php";
+        }else{
+            window.location.href = "serviciosvista.php";
+        }
+
+    } else{
+        alert("Algo ha ido mal, intente nuevamente");
+        if (lugar==1){
+            window.location.href = "clientes.php";
+        }else{
+            window.location.href = "serviciosvista.php";
+        }
+    }
+}

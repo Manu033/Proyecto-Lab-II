@@ -1,13 +1,17 @@
 <?php include "header.php";?>
+<head>
+<link rel="stylesheet" href="./style.css">
+</head>
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-10">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Detalles de Clientes</h2>
+                        <h2 class="pull-left" id="detalles">Detalles de Clientes</h2>
                         <a href="./agregarcliente.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Agregar nuevo cliente</a>
                     </div>
+                    <div class="table-responsive">
                     <?php
                     // Include config file
 
@@ -59,6 +63,7 @@
                     // Close connection
                     mysqli_close($DB_conn);
                     ?>
+                    </div>
                 </div>
             </div>        
         </div>

@@ -127,7 +127,7 @@ if(isset($_POST["COD_SERVICIO"]) && !empty($_POST["COD_SERVICIO"])){
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-10">
                     <h2 class="mt-5">Modificar Registro</h2>
                     <p>Porfavor complete el siguiente formulario.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <script src="https://kit.fontawesome.com/2c7fa5bb6b.js" crossorigin="anonymous"></script>
-<title>Title</title>
+<title>Tus Rutas Hoy</title>
 </head>
 <body>
 
@@ -41,18 +41,18 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
     <div class="card">
     <div class="card-body">
 
-        <h4 class="card-title">Buscador</h4>
+        <h4 class="card-title" id="buscadorservicios">Buscador</h4>
 
 
 <form id="form2" name="form2" method="POST" action="PRUEBA.php">
         <div class="col-12 row">
 
             <div class="mb-3">
-                    <label  class="form-label">Nombre cliente a buscar</label>
-                    <input type="text" class="form-control" id="buscar" name="buscar" value="<?php echo $_POST["buscar"] ?>" >
+                    <label  class="form-label" id="buscadorservicios">Nombre cliente a buscar</label>
+                    <input type="text" class="form-control" id="buscar buscadorservicios" name="buscar" value="<?php echo $_POST["buscar"] ?>" >
             </div>
 
-            <h4 class="card-title">Filtro de búsqueda</h4>  
+            <h4 class="card-title" id="buscadorservicios">Filtro de búsqueda</h4>  
             
             <div class="col-11">
 
@@ -116,7 +116,7 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                 </div>
 
 
-                <h4 class="card-title">Ordenar por</h4>  
+                <h4 class="card-title" id="buscadorservicios">Ordenar por</h4>  
             
             <div class="col-11">
 
@@ -174,7 +174,7 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                         INNER JOIN CLIENTES CL ON SB.COD_CLIENTE = CL.COD_CLIENTE
                         INNER JOIN SERVICIOS SE ON SB.COD_SERVICIO = SE.COD_SERVICIO
                         INNER JOIN ESTADOS ES ON SB.COD_ESTADO = ES.COD_ESTADO ";
-                printf("si entra");
+                
                 
         }else{
                 $query ="SELECT  SB.COD_SERVICIO_BRINDADO, CL.NOMBRE_COMPLETO, CL.NRO_DOCUMENTO, ES.DESCRIPCION AS ESTADO, SE.DESCRIPCION AS TIPO_SERVICIO, SE.PRECIO, SB.FECHA_INICIO, SB.FECHA_FINALIZACION
@@ -183,7 +183,7 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                         INNER JOIN SERVICIOS SE ON SB.COD_SERVICIO = SE.COD_SERVICIO
                         INNER JOIN ESTADOS ES ON SB.COD_ESTADO = ES.COD_ESTADO ";
 
-        printf("no entra");
+       
                         
 
         if ($_POST["buscar"] != '' ){ 

@@ -1,3 +1,4 @@
+<script type="text/javascript" src="app.js"></script>
 <?php
 //Incluir archivo config para coneccion BD
 require_once "config.php";
@@ -45,10 +46,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Intentamos ejecutar la instruccion
             if(mysqli_stmt_execute($stmt)){
                 // Registro creado exitosamente, redireccionamos
-                header("location: index.php");
+                echo "<script> redireccionar(1,0); </script>";
                 exit();
             } else{
-                echo "Algo ha ido mal. Intente neuvamente";
+                echo "<script> redireccionar(2,0); </script>";
             }
         }
 
@@ -66,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-10">
                     <h2 class="mt-5">Crear Servicio</h2>
                     <p>Porfavor complete el siguiente formulario.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

@@ -3,18 +3,18 @@
     ?>
 
 <body>
-    <div class="container_info" id="divpendientes" onclick= "window.location = 'serviciospendientes.php'">
+    <div class="container_info" id="divpendientes" onclick= "window.location = 'buscadorserv.php'">
         <div class="cuadrado_pendiente cuadrado">
             <p class="titulo_turnos">Turnos pendientes: </p>
             <p class="num_turnos" id="pendientes">0</p>
         </div>
 
-        <div class="cuadrado_proceso cuadrado" id="divproceso" onclick= "window.location = 'serviciosproceso.php'">
+        <div class="cuadrado_proceso cuadrado" id="divproceso" onclick= "window.location = 'buscadorserv.php'">
             <p class="titulo_turnos">Turnos en Proceso: </p>
             <p class="num_turnos" id="proceso">0</p>
         </div>
 
-        <div class="cuadrado_finalizado cuadrado" id="divfinalizado" onclick= "window.location = 'serviciosproceso.php'">
+        <div class="cuadrado_finalizado cuadrado" id="divfinalizado" onclick= "window.location = 'buscadorserv.php'">
             <p class="titulo_turnos">Turnos Finalizados: </p>
             <p class="num_turnos" id="finalizado">0</p>
         </div>
@@ -49,6 +49,11 @@
 
     <?php include "footer.php"; ?>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script> -->
 </body>
 </html>

@@ -62,8 +62,9 @@ if(isset($_POST["COD_SERVICIO"]) && !empty($_POST["COD_SERVICIO"])){
                         <div class="alert alert-danger">
                             <input type="hidden" name="COD_SERVICIO" value="<?php echo trim($_GET["COD_SERVICIO"]); ?>"/>
                             <p>Estas seguro que deseas eliminar esta servicio?</p>
+                            <p>El servicio no se eliminará si existen servicios brindados de este tipo</p> 
                             <p>
-                                <input type="submit" value="Yes" class="btn btn-danger">
+                                <input type="submit" value="Si" class="btn btn-danger">
                                 <a href="serviciosvista.php" class="btn btn-secondary">No</a>
                             </p>
                         </div>

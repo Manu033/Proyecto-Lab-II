@@ -34,10 +34,7 @@ mqueue /dev/mqueue mqueue rw,relatime 0 0
 /dev/sda4 /var/tmp xfs rw,nosuid,noexec,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
 fusectl /sys/fs/fuse/connections fusectl rw,relatime 0 0
 binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,relatime 0 0
-tmpfs /run/user/3885 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=3885,gid=3888 0 0
-tmpfs /run/user/2559 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=2559,gid=2562 0 0
-tmpfs /run/user/1389 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=1389,gid=1392 0 0
-tmpfs /run/user/1980 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=1980,gid=1983 0 0
-tmpfs /run/user/1978 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=1978,gid=1981 0 0
-tmpfs /run/user/1312 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=1312,gid=1315 0 0
-tmpfs /run/user/2582 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=2582,gid=2585 0 0
+tmpfs /run/user/3062 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=3062,gid=3065 0 0
+tmpfs /run/user/3811 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=3811,gid=3814 0 0
+tmpfs /run/user/2360 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=2360,gid=2363 0 0
+tmpfs /run/user/2498 tmpfs rw,nosuid,nodev,relatime,size=13163836k,mode=700,uid=2498,gid=2501 0 0

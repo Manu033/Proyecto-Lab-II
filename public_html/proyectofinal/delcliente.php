@@ -39,6 +39,7 @@ if(isset($_POST["COD_CLIENTE"]) && !empty($_POST["COD_CLIENTE"])){
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,9 +63,10 @@ if(isset($_POST["COD_CLIENTE"]) && !empty($_POST["COD_CLIENTE"])){
                         <div class="alert alert-danger">
                             <input type="hidden" name="COD_CLIENTE" value="<?php echo trim($_GET["COD_CLIENTE"]); ?>"/>
                             <p>Estas seguro que deseas eliminar esta persona?</p>
+                            <p>El cliente no se eliminará si tiene servicios brindados a su nombre</p>
                             <p>
-                                <input type="submit" value="Yes" class="btn btn-danger">
-                                <a href="index.php" class="btn btn-secondary">No</a>
+                                <input type="submit" value="Si" class="btn btn-danger">
+                                <a href="clientes.php" class="btn btn-secondary">No</a>
                             </p>
                         </div>
                     </form>

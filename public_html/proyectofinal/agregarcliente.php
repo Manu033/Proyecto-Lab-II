@@ -1,3 +1,4 @@
+<script type="text/javascript" src="app.js"></script>
 <?php
 //Incluir archivo config para coneccion BD
 require_once "config.php";
@@ -52,9 +53,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validamos el documento
     $input_documento = trim($_POST["documento"]);
     if(empty($input_documento)){
-        $documento_err = "Porfavor ingrese un numero de telefono.";     
+        $documento_err = "Porfavor ingrese un numero de documento.";     
     } elseif(!ctype_digit($input_documento)){
-        $documento_err = "Ingrese un numero de telefono valido.";
+        $documento_err = "Ingrese un numero de documento valido.";
     } else{
         $documento = $input_documento;
     }
@@ -79,11 +80,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Intentamos ejecutar la instruccion
             if(mysqli_stmt_execute($stmt)){
-                // Registro creado exitosamente, redireccionamos
-                header("location: index.php");
+                echo "<script> redireccionar(1,1); </script>";
                 exit();
             } else{
-                echo "Algo ha ido mal. Intente neuvamente";
+                echo "<script> redireccionar(2,1); </script>";
             }
         }
 
@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-10">
                     <h2 class="mt-5">Crear Cliente</h2>
                     <p>Porfavor complete el siguiente formulario.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -117,30 +117,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group">
                             <label>Apellido</label>
                             <input type="text" name="apellido" class="form-control <?php echo (!empty($apellido_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $apellido; ?>">
-                            <span class="invalid-feedback"></span>
+                            <span class="invalid-feedback"><?php echo $apellido_err;?></span>
                         </div>
 
                         <div class="form-group">
                             <label>Telefono</label>
                             <input type="number" name="telefono" class="form-control <?php echo (!empty($telefono_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefono; ?>">
-                            <span class="invalid-feedback">0</span>
+                            <span class="invalid-feedback"><?php echo $telefono_err;?></span>
                         </div>
                         
                         <div class="form-group">
                             <label>Documento</label>
                             <input type="number" name="documento" class="form-control <?php echo (!empty($documento_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $documento; ?>">
-                            <span class="invalid-feedback">0</span>
+                            <span class="invalid-feedback"><?php echo $documento_err;?></span>
                         </div>
 
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
-                            <span class="invalid-feedback"></span>
+                            <span class="invalid-feedback"><?php echo $email_err;?></span>
                         </div>
 
 
                         <input type="submit" id="botones" class="btn btn-success" value="Aceptar">
-                        <a href="index.php" id="botones" class="btn btn-danger ml-2">Cancel</a>
+                        <a href="clientes.php" id="botones" class="btn btn-danger ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
