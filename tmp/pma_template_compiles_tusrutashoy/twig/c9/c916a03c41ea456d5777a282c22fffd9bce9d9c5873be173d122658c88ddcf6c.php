@@ -264,11 +264,8 @@ $context["row"], "Field", [], "array"), ($context["central_list"] ?? null))) ? (
         if ((($context["tbl_is_view"] ?? null) &&  !($context["db_is_system_schema"] ?? null))) {
             // line 136
             echo "        ";
-            $context["edit_view_url"] = ("view_create.php" . ($context["edit_view_url"] ?? null));
-            // line 137
-            echo "        ";
-            echo PhpMyAdmin\Util::linkOrButton(            // line 138
-($context["edit_view_url"] ?? null), PhpMyAdmin\Util::getIcon("b_edit", _gettext("Edit view"), true));
+            echo PhpMyAdmin\Util::linkOrButton("view_create.php", ["db" =>             // line 138
+($context["db"] ?? null), "table" => ($context["table"] ?? null)], PhpMyAdmin\Util::getIcon("b_edit", _gettext("Edit view"), true));
             // line 140
             echo "
     ";
@@ -369,55 +366,52 @@ $context["row"], "Field", [], "array"), ($context["central_list"] ?? null))) ? (
                 // line 196
                 $context["remove_sql"] = (("ALTER TABLE " . PhpMyAdmin\Util::backquote(($context["table"] ?? null))) . " REMOVE PARTITIONING");
                 // line 197
-                echo "        ";
-                $context["remove_url"] = ((("sql.php" . ($context["url_query"] ?? null)) . "&sql_query=") . twig_urlencode_filter(($context["remove_sql"] ?? null)));
-                // line 198
                 echo "
         ";
-                // line 199
-                $this->loadTemplate("table/structure/display_partitions.twig", "table/structure/display_structure.twig", 199)->display(twig_to_array(["db" =>                 // line 200
-($context["db"] ?? null), "table" =>                 // line 201
-($context["table"] ?? null), "url_query" =>                 // line 202
-($context["url_query"] ?? null), "partitions" =>                 // line 203
-($context["partitions"] ?? null), "partition_method" => $this->getAttribute(                // line 204
-($context["first_partition"] ?? null), "getMethod", [], "method"), "partition_expression" => $this->getAttribute(                // line 205
-($context["first_partition"] ?? null), "getExpression", [], "method"), "has_description" =>  !twig_test_empty($this->getAttribute(                // line 206
-($context["first_partition"] ?? null), "getDescription", [], "method")), "has_sub_partitions" =>                 // line 207
-($context["has_sub_partitions"] ?? null), "sub_partition_method" => ((                // line 208
-($context["has_sub_partitions"] ?? null)) ? ($this->getAttribute(($context["first_sub_partition"] ?? null), "getMethod", [], "method")) : ("")), "sub_partition_expression" => ((                // line 209
-($context["has_sub_partitions"] ?? null)) ? ($this->getAttribute(($context["first_sub_partition"] ?? null), "getExpression", [], "method")) : ("")), "action_icons" =>                 // line 210
-($context["action_icons"] ?? null), "range_or_list" =>                 // line 211
-($context["range_or_list"] ?? null), "remove_url" =>                 // line 212
-($context["remove_url"] ?? null)]));
-                // line 214
+                // line 198
+                $this->loadTemplate("table/structure/display_partitions.twig", "table/structure/display_structure.twig", 198)->display(twig_to_array(["db" =>                 // line 199
+($context["db"] ?? null), "table" =>                 // line 200
+($context["table"] ?? null), "url_query" =>                 // line 201
+($context["url_query"] ?? null), "partitions" =>                 // line 202
+($context["partitions"] ?? null), "partition_method" => $this->getAttribute(                // line 203
+($context["first_partition"] ?? null), "getMethod", [], "method"), "partition_expression" => $this->getAttribute(                // line 204
+($context["first_partition"] ?? null), "getExpression", [], "method"), "has_description" =>  !twig_test_empty($this->getAttribute(                // line 205
+($context["first_partition"] ?? null), "getDescription", [], "method")), "has_sub_partitions" =>                 // line 206
+($context["has_sub_partitions"] ?? null), "sub_partition_method" => ((                // line 207
+($context["has_sub_partitions"] ?? null)) ? ($this->getAttribute(($context["first_sub_partition"] ?? null), "getMethod", [], "method")) : ("")), "sub_partition_expression" => ((                // line 208
+($context["has_sub_partitions"] ?? null)) ? ($this->getAttribute(($context["first_sub_partition"] ?? null), "getExpression", [], "method")) : ("")), "action_icons" =>                 // line 209
+($context["action_icons"] ?? null), "range_or_list" =>                 // line 210
+($context["range_or_list"] ?? null), "remove_url_params" => twig_array_merge(                // line 211
+($context["url_params"] ?? null), ["sql_query" => ($context["remove_sql"] ?? null)])]));
+                // line 213
                 echo "    ";
             } else {
-                // line 215
+                // line 214
                 echo "        ";
-                $this->loadTemplate("table/structure/display_partitions.twig", "table/structure/display_structure.twig", 215)->display(twig_to_array(["db" =>                 // line 216
-($context["db"] ?? null), "table" =>                 // line 217
+                $this->loadTemplate("table/structure/display_partitions.twig", "table/structure/display_structure.twig", 214)->display(twig_to_array(["db" =>                 // line 215
+($context["db"] ?? null), "table" =>                 // line 216
 ($context["table"] ?? null)]));
-                // line 219
+                // line 218
                 echo "    ";
             }
-            // line 220
+            // line 219
             echo "    ";
-            // line 221
+            // line 220
             echo "    </div>
 ";
         }
-        // line 223
+        // line 222
         echo "
 ";
-        // line 225
+        // line 224
         if (($context["show_stats"] ?? null)) {
-            // line 226
+            // line 225
             echo "    ";
             echo ($context["table_stats"] ?? null);
             echo "
 ";
         }
-        // line 228
+        // line 227
         echo "<div class=\"clearfloat\"></div>
 ";
     }
@@ -434,7 +428,7 @@ $context["row"], "Field", [], "array"), ($context["central_list"] ?? null))) ? (
 
     public function getDebugInfo()
     {
-        return array (  421 => 228,  415 => 226,  413 => 225,  410 => 223,  406 => 221,  404 => 220,  401 => 219,  399 => 217,  398 => 216,  396 => 215,  393 => 214,  391 => 212,  390 => 211,  389 => 210,  388 => 209,  387 => 208,  386 => 207,  385 => 206,  384 => 205,  383 => 204,  382 => 203,  381 => 202,  380 => 201,  379 => 200,  378 => 199,  375 => 198,  372 => 197,  370 => 196,  365 => 194,  362 => 193,  359 => 192,  356 => 191,  353 => 190,  351 => 182,  348 => 181,  345 => 180,  342 => 179,  339 => 178,  336 => 177,  333 => 176,  331 => 175,  330 => 174,  329 => 173,  327 => 172,  324 => 171,  321 => 170,  318 => 169,  316 => 168,  314 => 167,  311 => 165,  305 => 163,  303 => 162,  302 => 161,  299 => 159,  296 => 156,  295 => 155,  294 => 154,  292 => 153,  290 => 152,  287 => 151,  285 => 149,  284 => 148,  283 => 147,  282 => 146,  281 => 145,  280 => 144,  279 => 143,  277 => 142,  273 => 140,  271 => 138,  269 => 137,  266 => 136,  264 => 135,  261 => 134,  259 => 131,  258 => 130,  257 => 129,  253 => 127,  251 => 125,  250 => 124,  249 => 123,  248 => 122,  247 => 121,  246 => 120,  245 => 119,  240 => 116,  233 => 114,  230 => 113,  228 => 111,  227 => 110,  226 => 109,  225 => 108,  224 => 107,  223 => 106,  222 => 105,  221 => 104,  220 => 103,  219 => 102,  218 => 101,  217 => 100,  216 => 99,  215 => 98,  214 => 97,  212 => 96,  209 => 95,  207 => 93,  206 => 92,  205 => 91,  204 => 90,  203 => 89,  202 => 88,  201 => 87,  200 => 86,  199 => 85,  198 => 84,  197 => 83,  196 => 82,  195 => 81,  194 => 80,  193 => 79,  192 => 77,  191 => 73,  190 => 72,  189 => 71,  186 => 70,  183 => 69,  180 => 66,  177 => 65,  174 => 64,  171 => 61,  169 => 60,  166 => 59,  163 => 58,  160 => 57,  157 => 55,  155 => 54,  152 => 53,  150 => 52,  147 => 51,  145 => 50,  142 => 49,  140 => 48,  137 => 47,  135 => 46,  132 => 45,  130 => 44,  127 => 43,  124 => 42,  121 => 41,  118 => 40,  115 => 39,  112 => 38,  109 => 37,  107 => 36,  104 => 35,  101 => 34,  98 => 33,  95 => 31,  92 => 30,  90 => 29,  87 => 28,  84 => 27,  81 => 26,  78 => 25,  73 => 24,  70 => 23,  67 => 22,  64 => 20,  62 => 18,  61 => 17,  60 => 16,  58 => 15,  53 => 11,  50 => 10,  47 => 8,  45 => 7,  43 => 6,  41 => 5,  37 => 3,  33 => 2,  30 => 1,);
+        return array (  415 => 227,  409 => 225,  407 => 224,  404 => 222,  400 => 220,  398 => 219,  395 => 218,  393 => 216,  392 => 215,  390 => 214,  387 => 213,  385 => 211,  384 => 210,  383 => 209,  382 => 208,  381 => 207,  380 => 206,  379 => 205,  378 => 204,  377 => 203,  376 => 202,  375 => 201,  374 => 200,  373 => 199,  372 => 198,  369 => 197,  367 => 196,  362 => 194,  359 => 193,  356 => 192,  353 => 191,  350 => 190,  348 => 182,  345 => 181,  342 => 180,  339 => 179,  336 => 178,  333 => 177,  330 => 176,  328 => 175,  327 => 174,  326 => 173,  324 => 172,  321 => 171,  318 => 170,  315 => 169,  313 => 168,  311 => 167,  308 => 165,  302 => 163,  300 => 162,  299 => 161,  296 => 159,  293 => 156,  292 => 155,  291 => 154,  289 => 153,  287 => 152,  284 => 151,  282 => 149,  281 => 148,  280 => 147,  279 => 146,  278 => 145,  277 => 144,  276 => 143,  274 => 142,  270 => 140,  268 => 138,  266 => 136,  264 => 135,  261 => 134,  259 => 131,  258 => 130,  257 => 129,  253 => 127,  251 => 125,  250 => 124,  249 => 123,  248 => 122,  247 => 121,  246 => 120,  245 => 119,  240 => 116,  233 => 114,  230 => 113,  228 => 111,  227 => 110,  226 => 109,  225 => 108,  224 => 107,  223 => 106,  222 => 105,  221 => 104,  220 => 103,  219 => 102,  218 => 101,  217 => 100,  216 => 99,  215 => 98,  214 => 97,  212 => 96,  209 => 95,  207 => 93,  206 => 92,  205 => 91,  204 => 90,  203 => 89,  202 => 88,  201 => 87,  200 => 86,  199 => 85,  198 => 84,  197 => 83,  196 => 82,  195 => 81,  194 => 80,  193 => 79,  192 => 77,  191 => 73,  190 => 72,  189 => 71,  186 => 70,  183 => 69,  180 => 66,  177 => 65,  174 => 64,  171 => 61,  169 => 60,  166 => 59,  163 => 58,  160 => 57,  157 => 55,  155 => 54,  152 => 53,  150 => 52,  147 => 51,  145 => 50,  142 => 49,  140 => 48,  137 => 47,  135 => 46,  132 => 45,  130 => 44,  127 => 43,  124 => 42,  121 => 41,  118 => 40,  115 => 39,  112 => 38,  109 => 37,  107 => 36,  104 => 35,  101 => 34,  98 => 33,  95 => 31,  92 => 30,  90 => 29,  87 => 28,  84 => 27,  81 => 26,  78 => 25,  73 => 24,  70 => 23,  67 => 22,  64 => 20,  62 => 18,  61 => 17,  60 => 16,  58 => 15,  53 => 11,  50 => 10,  47 => 8,  45 => 7,  43 => 6,  41 => 5,  37 => 3,  33 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

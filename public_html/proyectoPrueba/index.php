@@ -1,91 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Crud Personas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        .wrapper{
-            width: 600px;
-            margin: 0 auto;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="shortcut icon" href="img/logo-mywebsite-urian-viera.svg"/>
+  <title>Eliminar - Actualizar Registro con Ventana Modal en PHP :: WebDeveloper Urian Viera</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/cargando.css">
+  <link rel="stylesheet" type="text/css" href="css/maquinawrite.css">
+  <style> 
+        table tr th{
+            background:rgba(0, 0, 0, .6);
+            color: azure;
         }
-        table tr td:last-child{
-            width: 120px;
+        tbody tr{
+          font-size: 12px !important;
+
         }
-    </style>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();   
-        });
-    </script>
+        h3{
+            color:crimson; 
+            margin-top: 100px;
+        }
+        a:hover{
+            cursor: pointer;
+            color: #333 !important;
+        }
+      </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Detalles de Personas</h2>
-                        <a href="./create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Agregar nueva persona</a>
-                    </div>
-                    <?php
-                    // Include config file
-                    require_once "config.php";
-                    
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM PERSONAS";
-                   // $result = mysqli_query($DB_conn, $sql)
-                    
-                    if($result = mysqli_query($DB_conn, $sql)){
-                        if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table table-bordered table-striped">';
-                                echo "<thead>";
-                                    echo "<tr>";
-                                        echo "<th>#</th>";
-                                        echo "<th>Nombre</th>";
-                                        echo "<th>Apellido</th>";
-                                        echo "<th>Email</th>";
-                                        echo "<th>Telefono</th>";                                        
-                                        echo "<th>Tipo contacto</th>";
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<tr>";
-                                        echo "<td>" . $row['COD_PERSONA'] . "</td>";
-                                        echo "<td>" . $row['NOMBRE'] . "</td>";
-                                        echo "<td>" . $row['APELLIDO'] . "</td>";
-                                        echo "<td>" . $row['EMAIL'] . "</td>";
-                                        echo "<td>" . $row['TELEFONO'] . "</td>";
-                                        echo "<td>" . $row['COD_TIPO_CONTACTO'] . "</td>";
-                                        echo "<td>";
-                                            echo '<a href="./read.php?COD_PERSONA='. $row['COD_PERSONA'] .'" class="mr-3" title="Ver detalle" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a href="./update.php?COD_PERSONA='. $row['COD_PERSONA'] .'" class="mr-3" title="Modificar Registro" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo '<a href="./delete.php?COD_PERSONA='. $row['COD_PERSONA'] .'" title="Eliminar Registro" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                        echo "</td>";
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                            echo "</table>";
-                            // Free result set
-                            mysqli_free_result($result);
-                        } else{
-                            echo '<div class="alert alert-danger"><em>Ningun registro encontrado.</em></div>';
-                        }
-                    } else{
-                        echo "Algo ha ido mal aca";
-                    }
- 
-                    // Close connection
-                    mysqli_close($DB_conn);
-                    ?>
-                </div>
-            </div>        
-        </div>
+
+<div class="cargando">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-dark fixed-top" style="background-color: #563d7c !important;">
+    <ul class="navbar-nav mr-auto collapse navbar-collapse">
+      <li class="nav-item active">
+        <a href="index.php"> 
+          <img src="img/logo-mywebsite-urian-viera.svg" alt="Web Developer Urian Viera" width="120">
+        </a>
+      </li>
+    </ul>
+    <div class="my-2 my-lg-0" id="maquinaescribir">
+      <h5 class="navbar-brand">Web Developer Urian Viera <span>&#160;</span></h5>
     </div>
+</nav>
+
+
+
+<div class="container mt-5 p-5">
+
+<?php
+include('config.php');
+
+$sqlCliente   = ("SELECT * FROM clientes ORDER BY id DESC ");
+$queryCliente = mysqli_query($con, $sqlCliente);
+$cantidad     = mysqli_num_rows($queryCliente);
+?>
+
+
+  <h4 class="text-center">
+    Como Eliminar & Actualizar Registro con Ventana Modal en PHP
+  </h4>
+  <hr>
+
+
+<div class="row text-center" style="background-color: #cecece">
+  <div class="col-md-6"> 
+    <strong>Registrar Nuevo Cliente</strong>
+  </div>
+  <div class="col-md-6"> 
+    <strong>Lista de Clientes <span style="color: crimson">  ( <?php echo $cantidad; ?> )</span> </strong>
+  </div>
+</div>
+
+<div class="row clearfix">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <div class="body">
+      <div class="row clearfix">
+
+        <div class="col-sm-5">
+        <!--- Formulario para registrar Cliente --->
+        <?php include('registrarCliente.php');  ?>
+
+        </div>  
+
+
+
+          <div class="col-sm-7">
+              <div class="row">
+                <div class="col-md-12 p-2">
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Celular</th>
+                            <th scope="col">Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php
+                              while ($dataCliente = mysqli_fetch_array($queryCliente)) { ?>
+                          <tr>
+                            <td><?php echo $dataCliente['nombre']; ?></td>
+                            <td><?php echo $dataCliente['correo']; ?></td>
+                            <td><?php echo $dataCliente['celular']; ?></td>
+
+                          <td> 
+                              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataCliente['id']; ?>">
+                                  Eliminar
+                              </button>
+
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataCliente['id']; ?>">
+                                  Modificar
+                              </button>
+                          </td>
+                          </tr>
+
+
+                            <!--Ventana Modal para Actualizar--->
+                            <?php  include('ModalEditar.php'); ?>
+
+                            <!--Ventana Modal para la Alerta de Eliminar--->
+                            <?php include('ModalEliminar.php'); ?>
+
+
+                        <?php } ?>
+
+                    </table>
+                </div>
+
+
+              </div>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $(window).load(function() {
+            $(".cargando").fadeOut(1000);
+        });
+
+//Ocultar mensaje
+    setTimeout(function () {
+        $("#contenMsjs").fadeOut(1000);
+    }, 3000);
+
+
+
+    $('.btnBorrar').click(function(e){
+        e.preventDefault();
+        var id = $(this).attr("id");
+
+        var dataString = 'id='+ id;
+        url = "recib_Delete.php";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: dataString,
+                success: function(data)
+                {
+                  window.location.href="index.php";
+                  $('#respuesta').html(data);
+                }
+            });
+    return false;
+
+    });
+
+
+});
+</script>
+
 </body>
 </html>

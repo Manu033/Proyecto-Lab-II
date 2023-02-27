@@ -264,3 +264,7 @@ footer{
 #alertSuccess .msg{
   color: #155724;
 }
+
+.table{
+  background-color: white;
+}

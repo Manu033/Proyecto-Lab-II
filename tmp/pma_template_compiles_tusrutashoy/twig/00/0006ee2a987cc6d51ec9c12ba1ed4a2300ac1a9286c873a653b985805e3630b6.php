@@ -351,7 +351,7 @@ $context["sub_partition"], "getIndexLength", [], "method"), 3, 1);
         } else {
             // line 137
             echo "                ";
-            echo PhpMyAdmin\Util::linkOrButton(($context["remove_url"] ?? null), _gettext("Remove partitioning"), ["class" => "button ajax", "id" => "remove_partitioning"]);
+            echo PhpMyAdmin\Util::linkOrButton("sql.php", ($context["remove_url_params"] ?? null), _gettext("Remove partitioning"), ["class" => "button ajax", "id" => "remove_partitioning"]);
             // line 140
             echo "
                 <input type=\"submit\" name=\"edit_partitioning\" value=\"";
