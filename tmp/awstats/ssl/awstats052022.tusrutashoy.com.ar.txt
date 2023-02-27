@@ -1,0 +1,322 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202205 will be lost/reset.
+# Last config file used to build this data file was /home/tusrutashoy/tmp/awstats/ssl/awstats.tusrutashoy.com.ar.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2022                
+POS_TIME 2693                
+POS_VISITOR 8215                
+POS_DAY 8691                
+POS_DOMAIN 3259                
+POS_LOGIN 3517                
+POS_ROBOT 3672                
+POS_WORMS 3874                
+POS_EMAILSENDER 4005                
+POS_EMAILRECEIVER 4148                
+POS_SESSION 8921                
+POS_SIDER 9074                
+POS_FILETYPES 4283                
+POS_DOWNLOADS 4548                
+POS_OS 4596                
+POS_BROWSER 4702                
+POS_SCREENSIZE 4841                
+POS_UNKNOWNREFERER 4915                
+POS_UNKNOWNREFERERBROWSER 5531                
+POS_ORIGIN 6056                
+POS_SEREFERRALS 6193                
+POS_PAGEREFS 6337                
+POS_SEARCHWORDS 7535                
+POS_KEYWORDS 7687                
+POS_MISC 2357                
+POS_ERRORS 7746                
+POS_CLUSTER 3373                
+POS_SIDER_404 7856                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20220601101214 1 0 9409745783602
+FirstTime 20220501011041
+LastTime 20220515081436
+LastUpdate 20220602083651 1 0 0 0 0
+TotalVisits 11                  
+TotalUnique 10                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 10                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+DirectorSupport 0 0 0
+AddToFavourites 0 2 0
+JavaEnabled 0 0 0
+FlashSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+JavascriptDisabled 0 0 0
+TotalMisc 0 0 0
+PDFSupport 0 0 0
+RealPlayerSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 1 1 1415
+1 1 4 151674 1 1 52
+2 0 0 0 0 0 0
+3 1 1 38092 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 2 2 70
+6 0 0 0 0 0 0
+7 0 0 0 1 1 35
+8 5 5 26681 2 2 104
+9 0 0 0 0 0 0
+10 0 0 0 1 1 38104
+11 0 0 0 0 0 0
+12 0 0 0 0 0 0
+13 0 0 0 1 1 1415
+14 120 345 2318159 63 80 24521
+15 54 57 214362 66 66 10804
+16 11 21 168827 24 24 3144
+17 1 1 1481 7 7 917
+18 0 0 0 0 0 0
+19 1 4 151564 0 1 708
+20 0 0 0 0 0 0
+21 1 1 38104 0 0 0
+22 0 0 0 0 0 0
+23 0 0 0 1 1 38242
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 3
+ar 186 427 2816301
+us 6 9 178355
+ca 3 3 114288
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 2
+no_user_agent 3 77761 20220531004805 0
+survey 1 1415 20220508131446 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 11
+png 151 309685 0 0
+js 64 1031975 0 0
+woff 10 227320 0 0
+gif 3 3702 0 0
+jpeg 4 190268 0 0
+Unknown 8 2418 0 0
+svg 7 130313 0 0
+php 160 636419 0 0
+css 15 202760 0 0
+html 15 220128 0 0
+woff2 2 153956 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 3
+win10 427 186
+ios_iphone 4 1
+Unknown 8 8
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 5
+mozilla 5 5
+chrome101.0.4951.54 409 181
+chrome100.0.4896.127 18 5
+safari 4 1
+Unknown 3 3
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 3
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20220515081436
+Expanse,_a_Palo_Alto_Networks_company,_searches_across_the_global_IPv4_space_multiple_times_per_day_to_identify_customers&#39;_presences_on_the_Internet._If_you_would_like_to_be_excluded_from_our_scans,_please_send_IP_addresses/domains_to:_scaninfo@paloaltonetworks.com 20220507160013
+Expanse_indexes_customers\xe2\x80\x99_network_perimeters._If_you_have_any_questions_or_concerns,_please_reach_out_to:_scaninfo@expanseinc.com. 20220504031743
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+Expanse,_a_Palo_Alto_Networks_company,_searches_across_the_global_IPv4_space_multiple_times_per_day_to_identify_customers&#39;_presences_on_the_Internet._If_you_would_like_to_be_excluded_from_our_scans,_please_send_IP_addresses/domains_to:_scaninfo@paloaltonetworks.com 20220507160013
+Expanse_indexes_customers\xe2\x80\x99_network_perimeters._If_you_have_any_questions_or_concerns,_please_reach_out_to:_scaninfo@expanseinc.com. 20220504031743
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 170 260
+From1 0 0
+From2 0 0
+From3 25 173
+From4 0 6
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 10
+https://cpanel.tusrutashoy.com.ar 13 55
+https://cpanel.tusrutashoy.com.ar/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/open_sans.min.css 6 6
+https://cpanel.tusrutashoy.com.ar/cPanel_magic_revision_1629311944/frontend/paper_lantern/_assets/css/master-ltr.cmb.min.css 5 5
+https://cpanel.tusrutashoy.com.ar/cpsess4082697681/frontend/paper_lantern/softaculous/themes/default/css/font-awesome-5.css 1 1
+https://cpanel.tusrutashoy.com.ar/cpsess4082697681/3rdparty/phpMyAdmin/themes/pmahomme/jquery/jquery-ui.css 0 6
+https://cpanel.tusrutashoy.com.ar/styled/current_style/sprites/icon_spritemap.css 0 2
+https://cpanel.tusrutashoy.com.ar/cPanel_magic_revision_1629311941/unprotected/cpanel/style_v2_optimized.css 0 14
+https://cpanel.tusrutashoy.com.ar/cPanel_magic_revision_1617226253/frontend/paper_lantern/libraries/chosen/1.5.1/chosen.min.css 0 1
+https://cpanel.tusrutashoy.com.ar/cpsess4082697681/3rdparty/phpMyAdmin/phpmyadmin.css.php 0 82
+https://cpanel.tusrutashoy.com.ar/cpsess4082697681/frontend/paper_lantern/index.html 0 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+401 6 261
+404 1 708
+308 175 29316
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 1
+/img/mifavicon.jpeg 1 https://tusrutashoy.com.ar/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 10
+181.15.88.44 181 409 2542888 20220510172341
+181.15.88.46 4 14 121849 20220506165049
+167.248.133.44 2 2 24518 20220501080846
+167.248.133.47 2 2 1442 20220515081436
+205.210.31.7 1 1 38092 20220504031743
+152.171.245.118 1 4 151564 20220501191038
+161.129.172.254 1 4 151674 20220501011041
+205.210.31.160 1 1 38104 20220503213901
+167.248.133.62 1 1 721 20220513081135
+205.210.31.141 1 1 38092 20220507160013
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 8
+20220501 5 11 328477 4
+20220503 1 1 38104 1
+20220504 1 1 38092 1
+20220506 4 14 121849 1
+20220507 1 1 38092 1
+20220510 181 409 2542888 1
+20220513 1 1 721 1
+20220515 1 1 721 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 2
+0s-30s 10
+1h+ 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 42
+/cpsess4082697681/3rdparty/phpMyAdmin/index.php 51 95118 0 1
+/cpsess4082697681/3rdparty/phpMyAdmin/sql.php 22 146468 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/db_designer.php 19 45195 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_structure.php 12 63653 0 0
+/ 12 167123 11 9
+/cpsess4082697681/3rdparty/phpMyAdmin/navigation.php 11 27286 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_operations.php 6 38071 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/ajax.php 6 8594 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/db_structure.php 6 33166 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_change.php 4 25367 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_replace.php 3 20653 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/db_operations.php 2 8874 0 0
+/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/OpenSans-Bold-webfont.woff 2 44864 0 1
+/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/OpenSans-Semibold-webfont.woff 2 45816 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/lint.php 2 56 0 0
+/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/OpenSans-Regular-webfont.woff 2 45320 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/js/messages.php 2 19890 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/js/whitelist.php 2 982 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_addfield.php 2 11392 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/phpmyadmin.css.php 2 41642 0 0
+/cpsess4082697681/execute/Notifications/get_notifications_count 2 164 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/import.php 2 3998 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_create.php 2 35689 0 0
+/cPanel_magic_revision_1629311944/frontend/paper_lantern/libraries/ui-fonts/open_sans/optimized/OpenSans-Semibold-webfont.woff 1 22908 0 0
+/cPanel_magic_revision_1629311944/frontend/paper_lantern/libraries/fontawesome/webfonts/fa-solid-900.woff2 1 75760 0 0
+/login/ 1 120 0 0
+/cpsess4082697681/frontend/paper_lantern/ 1 38366 0 0
+/cpsess4082697681/frontend/paper_lantern/sql/PhpMyAdmin.html 1 14519 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_row_action.php 1 1950 0 0
+/cpsess4082697681/frontend/paper_lantern/softaculous/index.live.php 1 2874 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/tbl_indexes.php 1 2822 0 0
+/cpsess4082697681/execute/Personalization/get 1 162 0 0
+/cpsess4082697681/3rdparty/phpMyAdmin/browse_foreigners.php 1 2679 0 0
+/cpsess4082697681/execute/Personalization/set 1 164 0 0
+/cPanel_magic_revision_1629311944/frontend/paper_lantern/libraries/bootstrap/optimized/fonts/glyphicons-halflings-regular.woff 1 23320 0 0
+/cpsess4082697681/frontend/paper_lantern/softaculous/themes/default/fonts/fa-solid-900.woff2 1 78196 0 0
+/cpsess4082697681/execute/Resellers/list_accounts 1 163 0 0
+/cpsess4082697681/execute/Themes/list 1 123 0 0
+/cpsess4082697681/execute/SSL/installed_host 1 796 0 0
+/cPanel_magic_revision_1629311944/frontend/paper_lantern/libraries/ui-fonts/open_sans/optimized/OpenSans-Bold-webfont.woff 1 22432 0 0
+/cPanel_magic_revision_1629311944/frontend/paper_lantern/libraries/ui-fonts/open_sans/optimized/OpenSans-Regular-webfont.woff 1 22660 0 0
+/cpsess4082697681/execute/ResourceUsage/get_usages 1 846 0 0
+END_SIDER

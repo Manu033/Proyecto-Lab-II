@@ -1,0 +1,288 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202210 will be lost/reset.
+# Last config file used to build this data file was /home/tusrutashoy/tmp/awstats/ssl/awstats.tusrutashoy.com.ar.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2022                
+POS_TIME 2693                
+POS_VISITOR 6953                
+POS_DAY 7625                
+POS_DOMAIN 3238                
+POS_LOGIN 3493                
+POS_ROBOT 3648                
+POS_WORMS 3894                
+POS_EMAILSENDER 4025                
+POS_EMAILRECEIVER 4168                
+POS_SESSION 7811                
+POS_SIDER 7958                
+POS_FILETYPES 4303                
+POS_DOWNLOADS 4456                
+POS_OS 4504                
+POS_BROWSER 4691                
+POS_SCREENSIZE 5046                
+POS_UNKNOWNREFERER 5120                
+POS_UNKNOWNREFERERBROWSER 5207                
+POS_ORIGIN 5289                
+POS_SEREFERRALS 5423                
+POS_PAGEREFS 5567                
+POS_SEARCHWORDS 6345                
+POS_KEYWORDS 6497                
+POS_MISC 2357                
+POS_ERRORS 6556                
+POS_CLUSTER 3349                
+POS_SIDER_404 6644                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20221107171237 1 0 8728096511162
+FirstTime 20221004011702
+LastTime 20221026230203
+LastUpdate 20221108071942 1 0 0 0 0
+TotalVisits 16                  
+TotalUnique 15                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 15                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+FlashSupport 0 0 0
+QuickTimeSupport 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+PDFSupport 0 0 0
+DirectorSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+AddToFavourites 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 25 72 673622 12 12 573
+2 0 0 0 0 0 0
+3 10 10 146180 8 8 3174
+4 1 1 11351 0 0 0
+5 5 5 73090 5 5 32328
+6 0 0 0 0 0 0
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 0 0 0 0 0 0
+10 5 5 73090 3 3 105
+11 0 0 0 0 0 0
+12 0 0 0 0 0 0
+13 0 0 0 2 2 104
+14 1 1 11349 0 0 0
+15 0 0 0 1 1 35
+16 1 1 2912 0 0 0
+17 0 0 0 0 0 0
+18 1 1 11346 0 0 0
+19 0 0 0 1 1 1133
+20 0 0 0 0 0 0
+21 1 1 11344 0 0 0
+22 1 1 11347 0 0 0
+23 1 1 11349 0 0 0
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 3
+us 36 83 814798
+eu 15 15 219270
+ar 1 1 2912
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 3
+Apache\-HttpClient/ 1 1133 20221026192017 0
+no_user_agent 1 32171 20221018050126 0
+survey 1 2912 20221008032128 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 5
+html 37 493194 0 0
+woff 15 340000 0 0
+png 30 23970 0 0
+css 10 165555 0 0
+svg 7 14261 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 9
+androidkitkat 2 2
+androidnougat 3 3
+win7 3 3
+ios_iphone 2 2
+macosx12 1 1
+linux 14 4
+win10 68 31
+macosx14 1 1
+macosx13 5 5
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 16
+firefox58.0 9 9
+firefox82.0 1 1
+chrome76.0.3809.71 53 16
+safari11.0.3 1 1
+msie11.0 2 2
+mozilla 1 1
+chrome97.0.4692.71 1 1
+chrome104.0.5112.101 14 4
+edge16 3 3
+android 2 2
+safari10.0 2 2
+chrome86.0.4240.111 2 2
+chrome64.0.3282.186 3 3
+chrome20.0.1132.57 1 1
+chrome87.0.4280.88 1 1
+chrome59.0.3071.125 3 3
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 34 34
+From1 0 0
+From2 0 0
+From3 18 65
+From4 0 0
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 8
+https://webmail.tusrutashoy.com.ar/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/open_sans.min.css 9 9
+https://cpanel.tusrutashoy.com.ar/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/open_sans.min.css 6 6
+http://webmail.tusrutashoy.com.ar 2 2
+http://cpanel.tusrutashoy.com.ar 1 1
+https://cpanel.tusrutashoy.com.ar/cPanel_magic_revision_1629311941/unprotected/cpanel/style_v2_optimized.css 0 14
+https://cpanel.tusrutashoy.com.ar 0 6
+https://webmail.tusrutashoy.com.ar/cPanel_magic_revision_1629311941/unprotected/cpanel/style_v2_optimized.css 0 18
+https://webmail.tusrutashoy.com.ar 0 9
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 1
+401 29 1236
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 0
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 15
+65.154.226.169 8 27 240439 20221004015131
+69.4.87.74 5 5 73090 20221004035952
+93.119.227.91 5 5 73090 20221004014755
+93.119.227.34 5 5 73090 20221004104658
+93.119.227.19 5 5 73090 20221004054603
+69.4.89.106 5 5 73090 20221004034721
+65.154.226.109 4 14 120787 20221004011702
+65.154.226.171 4 13 119655 20221004011734
+65.154.226.168 4 13 119651 20221025012606
+107.191.125.224 2 2 22700 20221026230203
+208.115.223.204 1 1 11346 20221018184423
+162.253.176.249 1 1 11349 20221018141558
+168.235.94.202 1 1 11347 20221025220705
+104.237.135.178 1 1 11344 20221021211001
+190.19.73.33 1 1 2912 20221006160757
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 6
+20221004 41 79 846331 8
+20221006 1 1 2912 1
+20221018 2 2 22695 2
+20221021 1 1 11344 1
+20221025 6 15 142349 3
+20221026 1 1 11349 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 1
+0s-30s 16
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 4
+/ 37 493194 16 12
+/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/OpenSans-Semibold-webfont.woff 5 114540 0 0
+/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/OpenSans-Regular-webfont.woff 5 113300 0 0
+/cPanel_magic_revision_1616517441/unprotected/cpanel/fonts/open_sans/OpenSans-Bold-webfont.woff 5 112160 0 4
+END_SIDER

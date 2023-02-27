@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../../LibreriasWebDeveloper/fontawesome-free-6.1.2-web/css/all.css"> -->
+  <script src="https://kit.fontawesome.com/2c7fa5bb6b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  
+  
+
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="./index.html"><i class="fa-solid fa-wrench fs-2"></i> Mecanico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="./index.html"><button class="btn btn-outline-success  nav-link" type="button"><i class="fa-solid fa-house"></i> Inicio</button></a>
+        </li>
+        <li class="nav-item">
+          <a href="./agregarcliente.html"><button class="btn btn-sm btn-outline-secondary nav-link" type="button"><i class="fa-solid fa-user"></i> Agregar cliente</button></a>
+        </li>
+        <li class="nav-item">
+          <a href="./agregarturno.html"><button class="btn btn-sm btn-outline-secondary nav-link" type="button"><i class="fa-solid fa-pen-to-square"></i> Agregar turno</button></a> 
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle btn btn-sm btn-outline-secondary" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-pen-to-square"></i> TURNOS
+          </button>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="./turnospendientes.html">Turnos pendientes</a>
+            <a class="dropdown-item" href="./turnosenproceso.html">Turnos en proceso</a>
+            <a class="dropdown-item" href="./turnosfinalizados.html">Turnos finalizados</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Observaciones</th>
+        <th scope="col">Patente</th>
+        <th scope="col">Estado</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Manuel</td>
+        <td>Carrizo</td>
+        <td>manu@carrizo.com</td>
+        <td>351123456</td>
+        <td>Cambio de aceite</td>
+        <td>ABC123</td>
+        <td>Proceso</td>
+        <td>
+          <a href="./read.php?COD_PERSONA=1" class="mr-3" title="Ver detalle" data-toggle="tooltip">
+            <span class="fa fa-eye"></span></a>
+          <a href="./update.php?COD_PERSONA=1" class="mr-3" title="Modificar Registro" data-toggle="tooltip">
+            <span class="fa fa-pencil"></span></a>
+          <a href="./delete.php?COD_PERSONA=1" title="Eliminar Registro" data-toggle="tooltip">
+            <span class="fa fa-trash"></span></a>
+        </td>
+
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

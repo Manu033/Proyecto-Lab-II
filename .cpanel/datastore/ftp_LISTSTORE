@@ -1,0 +1,1 @@
+{"data":[{"homedir":"/home/tusrutashoy","type":"main","user":"tusrutashoy"},{"homedir":"/etc/apache2/logs/domlogs/tusrutashoy","type":"logaccess","user":"tusrutashoy_logs"}],"timeout":0,"version":"2.4","action":"fetch","error":0,"exit_code":0,"statusmsg":"Ran adminbin Cpanel/ftp/LISTSTORE","status":1,"mode":"simple"}

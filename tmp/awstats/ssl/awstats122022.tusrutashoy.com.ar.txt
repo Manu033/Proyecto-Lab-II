@@ -1,0 +1,321 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202212 will be lost/reset.
+# Last config file used to build this data file was /home/tusrutashoy/tmp/awstats/ssl/awstats.tusrutashoy.com.ar.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2022                
+POS_TIME 2693                
+POS_VISITOR 7308                
+POS_DAY 8052                
+POS_DOMAIN 3320                
+POS_LOGIN 3604                
+POS_ROBOT 3759                
+POS_WORMS 3891                
+POS_EMAILSENDER 4022                
+POS_EMAILRECEIVER 4165                
+POS_SESSION 8371                
+POS_SIDER 8567                
+POS_FILETYPES 4300                
+POS_DOWNLOADS 4452                
+POS_OS 4500                
+POS_BROWSER 4629                
+POS_SCREENSIZE 4865                
+POS_UNKNOWNREFERER 4939                
+POS_UNKNOWNREFERERBROWSER 5219                
+POS_ORIGIN 5301                
+POS_SEREFERRALS 5437                
+POS_PAGEREFS 5581                
+POS_SEARCHWORDS 5766                
+POS_KEYWORDS 5918                
+POS_MISC 2357                
+POS_ERRORS 5977                
+POS_CLUSTER 3460                
+POS_SIDER_404 6095                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20230101190805 1 0 9448159677272
+FirstTime 20221202071400
+LastTime 20221231015751
+LastUpdate 20230102072035 1 0 0 0 0
+TotalVisits 20                  
+TotalUnique 17                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 17                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+RealPlayerSupport 0 0 0
+PDFSupport 0 0 0
+TotalMisc 0 0 0
+AddToFavourites 0 0 0
+FlashSupport 0 0 0
+QuickTimeSupport 0 0 0
+DirectorSupport 0 0 0
+JavaEnabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+JavascriptDisabled 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 3 3 74744 12 12 2385
+2 2 2 24300 0 0 0
+3 1 1 895 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 1 1 52
+6 7 7 5789 0 0 0
+7 25 25 21241 8 10 87
+8 39 41 39847 4 7 708
+9 30 30 5499809 1 1 52
+10 29 29 2710005 0 5 3540
+11 31 58 57369 0 12 0
+12 51 79 93831 7 27 4248
+13 27 31 51982 6 8 2832
+14 0 0 0 0 0 0
+15 4 7 5752 2 5 2124
+16 1 1 12156 0 0 0
+17 47 47 34398 32 36 2229
+18 57 57 50742 8 16 5664
+19 44 44 50350 15 48 25488
+20 26 26 24510 6 7 2832
+21 14 14 21278 0 2 1416
+22 22 22 35508 1 2 708
+23 0 0 0 0 0 0
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 5
+ar 439 499 8669702
+cl 11 13 16499
+us 7 9 41413
+eu 2 2 74744
+nl 1 1 12148
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 5
+js 25 0 0 0
+Unknown 1 12975 0 0
+php 445 8630997 0 0
+html 14 130689 0 0
+css 39 39845 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 5
+win7 1 1
+macosx14 2 2
+Unknown 2 2
+win10 509 451
+ios_iphone 10 4
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 11
+netscape5.0 1 1
+chrome108.0.0.0 505 447
+firefox82.0 1 1
+safari16.0 6 2
+safari10.0 1 1
+edge16 1 1
+chrome86.0.4240.111 1 1
+safari14.0 2 2
+mozilla 2 2
+safari15.6.3 3 1
+chrome107.0.0.0 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 2
+Mozilla/5.0_(compatible;_Domains_Project/1.3.7;__https://domainsproject.org) 20221231012921
+Mozilla/5.0_(compatible;_InternetMeasurement/1.0;__https://internet-measurement.com/) 20221229220135
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 95 97
+From1 0 0
+From2 0 0
+From3 2 2
+From4 363 425
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+http://cpanel.tusrutashoy.com.ar 2 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+404 76 53808
+401 16 557
+500 31 0
+302 25 0
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 18
+/proyectofinal/delete.php 1 https://tusrutashoy.com.ar/proyectofinal/servicios.php
+/index.php 1 -
+/proyectofinal/update.php 1 https://tusrutashoy.com.ar/proyectofinal/servicios.php
+/proyectoprueba/index.html 1 -
+/proyectofinal/create.php 2 https://tusrutashoy.com.ar/proyectofinal/servicios.php
+/proyectofinal/index.php 1 -
+/indexphp 1 -
+/agregarcliente.php 1 -
+/proyectofinal/proyectofinal/index.php 1 https://tusrutashoy.com.ar/proyectofinal/agregarcliente.php
+/proyectofinal/app.js 5 https://tusrutashoy.com.ar/proyectofinal/index.php
+/ 12 -
+/proyectofinal/read.php 2 https://tusrutashoy.com.ar/proyectofinal/servicios.php
+/proyectofinal/css/style.css 40 https://tusrutashoy.com.ar/proyectofinal/index.html
+/proyectoPrueba/index.html 1 -
+/create.php 3 https://tusrutashoy.com.ar/proyectofinal/agregarcliente.php
+/proyectofinal/agregarcliente.php 1 -
+/proyectoprueba 1 -
+/proyectofinal/index..php 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 17
+152.171.218.206 149 176 8315975 20221214083450
+181.110.119.46 132 133 150373 20221211223224
+181.90.4.67 79 79 56456 20221206182610
+190.195.9.82 40 44 70675 20221212132419
+152.171.218.192 37 63 72662 20221212132022
+190.215.230.220 11 13 16499 20221214080556
+93.119.227.91 2 2 74744 20221231015751
+181.1.12.29 1 1 1080 20221207183155
+188.166.26.88 1 1 12148 20221229220135
+67.205.156.138 1 1 0 20221231012921
+181.10.83.8 1 3 2481 20221212154511
+45.32.199.75 1 1 12151 20221219024127
+104.168.35.234 1 1 895 20221203031751
+64.74.160.210 1 1 12149 20221210020434
+198.12.99.105 1 1 12156 20221226161902
+52.112.95.38 1 1 1586 20221214080213
+104.28.59.18 1 3 2476 20221212125456
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 12
+20221202 1 1 562 1
+20221203 1 1 895 1
+20221206 79 79 56456 1
+20221207 1 1 1080 1
+20221210 1 1 12149 1
+20221211 132 133 150373 2
+20221212 225 286 8460924 5
+20221214 14 16 20868 3
+20221219 1 1 12151 1
+20221226 1 1 12156 1
+20221229 1 1 12148 1
+20221231 3 3 74744 2
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 6
+15mn-30mn 1
+2mn-5mn 1
+5mn-15mn 1
+0s-30s 12
+1h+ 4
+30mn-1h 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 18
+/proyectofinal/index.php 117 154764 8 7
+/proyectofinal/servicios.php 116 5577152 1 3
+/proyectofinal/agregarcliente.php 48 57371 0 0
+/update.php 41 29618 0 1
+/proyectofinal/agregarbrindado.php 39 61609 0 0
+/index.php 31 24357 2 1
+/proyectofinal/agregarservicio.php 25 33120 0 0
+/proyectofinal/serviciopendiente.php 14 10754 0 0
+/ 8 124243 7 7
+/error.php 7 2604 0 0
+/proyectofinal/pruebaserv.php 5 2678647 0 0
+/proyectofinal/ 3 2160 1 1
+/proyectofinal/turnospendientes.html 1 1428 0 0
+/proyectofinal/agregarturno.html 1 1486 0 0
+/read.php 1 439 0 0
+/proyectoPrueba/index.php 1 562 1 0
+/cpanel 1 12975 0 0
+/proyectofinal/agregarcliente.html 1 1372 0 0
+END_SIDER

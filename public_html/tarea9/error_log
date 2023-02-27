@@ -1,0 +1,6 @@
+[07-Dec-2022 17:16:35 America/New_York] PHP Warning:  mysqli_stmt_bind_param(): Number of elements in type definition string doesn't match number of bind variables in /home/tusrutashoy/public_html/update.php on line 75
+[07-Dec-2022 17:25:20 America/New_York] PHP Parse error:  syntax error, unexpected ',' in /home/tusrutashoy/public_html/update.php on line 85
+[07-Dec-2022 17:25:24 America/New_York] PHP Parse error:  syntax error, unexpected ',' in /home/tusrutashoy/public_html/update.php on line 85
+[13-Feb-2023 07:08:33 America/New_York] PHP Warning:  mysqli_prepare() expects parameter 1 to be mysqli, null given in /home/tusrutashoy/public_html/tarea9/delete.php on line 10
+[13-Feb-2023 07:08:33 America/New_York] PHP Warning:  mysqli_stmt_close() expects parameter 1 to be mysqli_stmt, null given in /home/tusrutashoy/public_html/tarea9/delete.php on line 28
+[13-Feb-2023 07:08:33 America/New_York] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/tusrutashoy/public_html/tarea9/delete.php on line 31
