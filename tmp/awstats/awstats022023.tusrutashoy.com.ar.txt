@@ -8,33 +8,33 @@ AWSTATS DATA FILE 7.8 (build 20200416)
 # update).
 BEGIN_MAP 28
 POS_GENERAL 2018                
-POS_TIME 2682                
-POS_VISITOR 5913                
-POS_DAY 6023                
-POS_DOMAIN 3245                
-POS_LOGIN 3469                
-POS_ROBOT 3624                
-POS_WORMS 3756                
-POS_EMAILSENDER 3887                
-POS_EMAILRECEIVER 4030                
-POS_SESSION 6163                
-POS_SIDER 6309                
-POS_FILETYPES 4165                
-POS_DOWNLOADS 4249                
-POS_OS 4297                
-POS_BROWSER 4372                
-POS_SCREENSIZE 4462                
-POS_UNKNOWNREFERER 4536                
-POS_UNKNOWNREFERERBROWSER 4623                
-POS_ORIGIN 4705                
-POS_SEREFERRALS 4835                
-POS_PAGEREFS 4979                
-POS_SEARCHWORDS 5127                
-POS_KEYWORDS 5279                
-POS_MISC 2346                
-POS_ERRORS 5338                
-POS_CLUSTER 3325                
-POS_SIDER_404 5427                
+POS_TIME 2687                
+POS_VISITOR 6346                
+POS_DAY 6891                
+POS_DOMAIN 3290                
+POS_LOGIN 3533                
+POS_ROBOT 3688                
+POS_WORMS 3820                
+POS_EMAILSENDER 3951                
+POS_EMAILRECEIVER 4094                
+POS_SESSION 7076                
+POS_SIDER 7254                
+POS_FILETYPES 4229                
+POS_DOWNLOADS 4362                
+POS_OS 4410                
+POS_BROWSER 4504                
+POS_SCREENSIZE 4628                
+POS_UNKNOWNREFERER 4702                
+POS_UNKNOWNREFERERBROWSER 4789                
+POS_ORIGIN 4871                
+POS_SEREFERRALS 5005                
+POS_PAGEREFS 5149                
+POS_SEARCHWORDS 5297                
+POS_KEYWORDS 5449                
+POS_MISC 2351                
+POS_ERRORS 5508                
+POS_CLUSTER 3389                
+POS_SIDER_404 5598                
 END_MAP
 
 # LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
@@ -46,28 +46,28 @@ END_MAP
 # MonthHostsKnown   = Number of hosts known
 # MonthHostsUnKnown = Number of hosts unknown
 BEGIN_GENERAL 8
-LastLine 20230227020240 16 2621 5201248161815
+LastLine 20230228061810 130 33338 12819085076018
 FirstTime 0
-LastTime 20230226215535
-LastUpdate 20230227072728 16 0 16 0 0
-TotalVisits 6                   
-TotalUnique 1                   
+LastTime 20230228061810
+LastUpdate 20230228072238 130 0 130 0 0
+TotalVisits 20                  
+TotalUnique 11                  
 MonthHostsKnown 0                   
-MonthHostsUnknown 1                   
+MonthHostsUnknown 11                  
 END_GENERAL
 
 # Misc ID - Pages - Hits - Bandwidth
 BEGIN_MISC 10
-FlashSupport 0 0 0
-AddToFavourites 0 0 0
 WindowsMediaPlayerSupport 0 0 0
-RealPlayerSupport 0 0 0
-PDFSupport 0 0 0
 JavaEnabled 0 0 0
-QuickTimeSupport 0 0 0
-TotalMisc 0 0 0
-JavascriptDisabled 0 0 0
+RealPlayerSupport 0 0 0
+AddToFavourites 0 0 0
 DirectorSupport 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+TotalMisc 0 0 0
+QuickTimeSupport 0 0 0
+FlashSupport 0 0 0
 END_MISC
 
 # Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
@@ -77,31 +77,32 @@ BEGIN_TIME 24
 2 0 0 0 3 3 2124
 3 0 0 0 3 4 2832
 4 0 0 0 1 1 708
-5 0 0 0 1 1 708
-6 0 0 0 4 4 2832
-7 0 0 0 3 5 2124
-8 0 0 0 3 5 2124
-9 0 0 0 2 3 1416
-10 0 0 0 8 11 2832
-11 0 0 0 2 4 1416
-12 0 0 0 18 18 12744
-13 0 0 0 4 4 0
-14 0 0 0 5 7 3540
+5 0 0 0 2 3 1416
+6 2 2 3956 4 4 2832
+7 0 0 0 4 6 2832
+8 0 0 0 4 6 2832
+9 1 1 13211 3 5 2124
+10 39 41 86751 8 13 4248
+11 38 38 76466 3 16 7788
+12 1 1 13212 19 19 13452
+13 0 0 0 5 5 708
+14 4 6 12803 6 19 9912
 15 1 1 13212 6 9 4248
-16 0 0 0 1 1 708
+16 0 0 0 2 2 1416
 17 0 0 0 1 2 708
 18 2 2 26422 6 9 4248
-19 1 1 13211 2 2 1416
+19 1 1 13211 3 4 2124
 20 1 1 13212 2 4 1416
 21 2 2 26423 2 2 1416
-22 0 0 0 2 2 1416
-23 0 0 0 3 3 2124
+22 1 1 13211 2 3 1416
+23 2 2 4092 3 3 2124
 END_TIME
 
 # Domain - Pages - Hits - Bandwidth
 # The 25 first Pages must be first (order not required for others)
-BEGIN_DOMAIN 1
-ar 7 7 92480
+BEGIN_DOMAIN 2
+us 81 83 171265
+ar 14 16 144917
 END_DOMAIN
 
 # Cluster ID - Pages - Hits - Bandwidth
@@ -134,8 +135,11 @@ BEGIN_EMAILRECEIVER 0
 END_EMAILRECEIVER
 
 # Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
-BEGIN_FILETYPES 1
-Unknown 7 92480 0 0
+BEGIN_FILETYPES 4
+js 2 1508 0 0
+css 2 3008 0 0
+php 85 179552 0 0
+Unknown 10 132114 0 0
 END_FILETYPES
 
 # Downloads - Hits - Bandwidth
@@ -143,14 +147,17 @@ BEGIN_DOWNLOADS 0
 END_DOWNLOADS
 
 # OS ID - Hits
-BEGIN_OS ID - Hits - Pages 1
-win10 7 7
+BEGIN_OS ID - Hits - Pages 2
+ios_iphone 89 85
+win10 10 10
 END_OS
 
 # Browser ID - Hits - Pages
-BEGIN_BROWSER 2
+BEGIN_BROWSER 4
+safari16.1 6 4
 chrome109.0.0.0 1 1
-chrome110.0.0.0 6 6
+chrome110.0.0.0 9 9
+safari15.6.4 83 81
 END_BROWSER
 
 # Screen size - Hits
@@ -167,11 +174,11 @@ END_UNKNOWNREFERERBROWSER
 
 # Origin - Pages - Hits 
 BEGIN_ORIGIN 6
-From0 7 7
+From0 24 24
 From1 0 0
 From2 0 0
 From3 0 0
-From4 0 0
+From4 71 75
 From5 0 0
 END_ORIGIN
 
@@ -196,42 +203,75 @@ END_KEYWORDS
 
 # Errors - Hits - Bandwidth
 BEGIN_ERRORS 1
-404 85 54516
+404 113 74340
 END_ERRORS
 
 # URL with 404 errors - Hits - Last URL referrer
-BEGIN_SIDER_404 7
+BEGIN_SIDER_404 13
+/apple-touch-icon-precomposed.png 4 -
 /wp-includes/wlwmanifest.xml 1 -
-http://www.tusrutashoy.com.ar:80/ 2 -
+/apple-touch-icon-120x120.png 4 -
 /view-source: 1 -
-/misc/ajax.js 1 -
-/ 77 -
+/ 86 -
 http://tusrutashoy.com.ar:80/ 2 -
 /administrator/index.php 1 -
+http://www.tusrutashoy.com.ar:80/ 2 -
+/proyectofinal/css/style.css 2 http://tusrutashoy.com.ar/proyectofinal/agregarturno.php
+/apple-touch-icon.png 4 -
+/apple-touch-icon-120x120-precomposed.png 4 -
+/misc/ajax.js 1 -
+/proyectofinal/index.pho 1 -
 END_SIDER_404
 
 # Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
 # [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
 # The 25 first Hits must be first (order not required for others)
-BEGIN_VISITOR 1
-190.195.9.82 7 7 92480 20230226215535
+BEGIN_VISITOR 11
+104.28.59.10 26 26 56928 20230227111648
+104.28.59.11 15 15 27772 20230227111401
+104.28.59.8 14 14 29598 20230227111848
+104.28.59.9 11 11 23054 20230227112647
+190.195.9.82 10 10 132114 20230227220108
+104.28.59.12 5 5 10345 20230227235110
+104.28.59.13 4 4 7361 20230227104146
+186.158.234.127 4 6 12803 20230227140603
+172.225.222.132 3 5 10399 20230227103232
+104.28.59.6 2 2 3956 20230228061810 20230228061746 /proyectofinal/index.php
+172.225.222.134 1 1 1852 20230227103418
 END_VISITOR
 
 # Date - Pages - Hits - Bandwidth - Visits
-BEGIN_DAY 4
+BEGIN_DAY 6
 20230210 1 1 13212 1
 20230214 2 2 26422 2
 20230225 1 1 13212 1
 20230226 3 3 39634 2
+20230227 86 90 219746 13
+20230228 2 2 3956 1
 END_DAY
 
 # Session range - Number of visits
-BEGIN_SESSION 1
-0s-30s 6
+BEGIN_SESSION 4
+5mn-15mn 2
+30s-2mn 2
+0s-30s 13
+30mn-1h 2
 END_SESSION
 
 # URL - Pages - Bandwidth - Entry - Exit
 # The 25 first Pages must be first (order not required for others)
-BEGIN_SIDER 1
-/cpanel 7 92480 6 6
+BEGIN_SIDER 13
+/proyectofinal/index.php 26 50605 4 4
+/proyectofinal/clientes.php 14 28516 2 1
+/proyectofinal/serviciosvista.php 10 18387 1 0
+/cpanel 10 132114 9 9
+/proyectofinal/buscadorserv.php 10 32355 0 2
+/proyectofinal/agregarbrindado.php 9 19913 1 1
+/proyectofinal/modcliente.php 3 3959 0 0
+/proyectofinal/agregarcliente.php 3 5658 1 1
+/proyectofinal/modservicio.php 3 5430 1 0
+/proyectofinal/agregarservicio.php 2 3782 0 0
+/proyectofinal/agregarturno.php 2 4214 1 0
+/proyectofinal/PRUEBA.php 2 6147 0 1
+/proyectofinal/delcliente.php 1 586 0 0
 END_SIDER

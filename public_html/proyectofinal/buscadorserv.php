@@ -44,7 +44,7 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
         <h4 class="card-title" id="buscadorservicios">Buscador</h4>
 
 
-<form id="form2" name="form2" method="POST" action="PRUEBA.php">
+<form id="form2" name="form2" method="POST" action="buscadorserv.php">
         <div class="col-12 row">
 
             <div class="mb-3">
@@ -110,6 +110,10 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                                                                 </select></label>        
                                                         </select>
                                                 </th>
+                                                <th>
+                                                        Solo pagos
+                                                        <input type="checkbox" id="buscapagados" name="buscapagados"  value="1<?php echo $_POST["buscapagados"]; ?>" style="border: #bababa 1px solid; color:#000000;" >
+                                                </th>
                                         </tr>
                                 </thead>
                         </table>
@@ -169,7 +173,7 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
         $aKeyword = explode(" ", $_POST['buscar']);
         
         if ($_POST["buscar"] == '' AND $_POST['buscatiposervicio'] == '' AND $_POST['color'] == '' AND $_POST['buscafechadesde'] == '' AND $_POST['buscafechahasta'] == ''AND $_POST['buscapreciodesde'] == '' AND $_POST['buscapreciohasta'] == ''){ 
-                $query ="SELECT SB.COD_SERVICIO_BRINDADO, CL.NOMBRE_COMPLETO, CL.NRO_DOCUMENTO, ES.DESCRIPCION AS ESTADO, SE.DESCRIPCION AS TIPO_SERVICIO, SE.PRECIO, SB.FECHA_INICIO, SB.FECHA_FINALIZACION
+                $query ="SELECT SB.COD_SERVICIO_BRINDADO, CL.NOMBRE_COMPLETO, CL.NRO_DOCUMENTO, ES.DESCRIPCION AS ESTADO, SE.DESCRIPCION AS TIPO_SERVICIO, SE.PRECIO, SB.FECHA_INICIO, SB.FECHA_FINALIZACION, SB.PAGO, SB.FECHA_PAGO
                         FROM SERVICIOS_BRINDADOS SB 
                         INNER JOIN CLIENTES CL ON SB.COD_CLIENTE = CL.COD_CLIENTE
                         INNER JOIN SERVICIOS SE ON SB.COD_SERVICIO = SE.COD_SERVICIO
@@ -177,7 +181,7 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                 
                 
         }else{
-                $query ="SELECT  SB.COD_SERVICIO_BRINDADO, CL.NOMBRE_COMPLETO, CL.NRO_DOCUMENTO, ES.DESCRIPCION AS ESTADO, SE.DESCRIPCION AS TIPO_SERVICIO, SE.PRECIO, SB.FECHA_INICIO, SB.FECHA_FINALIZACION
+                $query ="SELECT  SB.COD_SERVICIO_BRINDADO, CL.NOMBRE_COMPLETO, CL.NRO_DOCUMENTO, ES.DESCRIPCION AS ESTADO, SE.DESCRIPCION AS TIPO_SERVICIO, SE.PRECIO, SB.FECHA_INICIO, SB.FECHA_FINALIZACION, SB.PAGO, SB.FECHA_PAGO
                         FROM SERVICIOS_BRINDADOS SB 
                         INNER JOIN CLIENTES CL ON SB.COD_CLIENTE = CL.COD_CLIENTE
                         INNER JOIN SERVICIOS SE ON SB.COD_SERVICIO = SE.COD_SERVICIO
@@ -223,6 +227,10 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
 
          if ( $_POST['buscardni'] != '' ){
                 $query .= " AND NRO_DOCUMENTO = '".$_POST['buscardni']."' ";
+         }
+         
+         if ( $_POST['buscapagados'] == 1 ){
+                $query .= " AND SB.PAGO = '".$_POST['buscapagados']."' ";
          }
 
          if ($_POST["orden"] == '1' ){
@@ -272,6 +280,8 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                                 <th style=" text-align: center;"> Precio </th>
                                 <th style=" text-align: center;"> Fecha Inicio </th>
                                 <th style=" text-align: center;"> Fecha Finalizacion </th>   
+                                <th style=" text-align: center;"> Pagado </th> 
+                                <th style=" text-align: center;"> Fecha Pago </th> 
                                 <th style=" text-align: center;"> Cambio de estado </th>
                         </tr>
                 </thead>
@@ -292,6 +302,9 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
                         <td style="text-align: center;"><?php echo $row["PRECIO"]; ?> $</td>
                         <td style=" text-align: center;"><?php echo $row["FECHA_INICIO"]; ?></td>
                         <td style=" text-align: center;"><?php echo $row["FECHA_FINALIZACION"]; ?></td>
+                        <td style=" text-align: center;"><?php if($row["PAGO"]){echo "SI";}; ?></td>
+                        
+                        <td style=" text-align: center;"><?php echo $row["FECHA_PAGO"]; ?></td> 
                         <td style= "text-align:center;">
                                 <?php 
                                         echo '<a href="./cambioestado.php?COD_SERVICIO_BRINDADO='. $row['COD_SERVICIO_BRINDADO'] .'" class="mr-3" title="Modificar Registro" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
@@ -310,12 +323,6 @@ if (!isset($_POST["orden"])){$_POST["orden"] = '';}
 </div>
 </div>
 </div>
-
-
-
-
-
-
 
 </body>
 </html>

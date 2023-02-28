@@ -1,0 +1,1 @@
+$(document).on("click",".openBV",function(){NPC.boutonVert.storeLocatorEmailRdv.ouvrirBoutonVert();window.scrollTo(0,0)});

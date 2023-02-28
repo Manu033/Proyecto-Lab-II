@@ -1,9 +1,8 @@
 <?php 
     include "header.php";
     ?>
-
 <body>
-    <div class="container_info" id="divpendientes" onclick= "window.location = 'buscadorserv.php'">
+    <div class="container_info d-flex " id="divpendientes" onclick= "window.location = 'buscadorserv.php'">
         <div class="cuadrado_pendiente cuadrado">
             <p class="titulo_turnos">Turnos pendientes: </p>
             <p class="num_turnos" id="pendientes">0</p>
@@ -46,8 +45,12 @@
     }   
 
     ?>
-
-    <?php include "footer.php"; ?>
+    <div>
+    <?php include "buscadorservindex.php"; ?>
+    </div>
+     <?php include "footer.php"; ?> 
+    
+   
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

@@ -1,3 +1,4 @@
+<script type="text/javascript" src="app.js"></script>
 <?php
 // Include config file
 require_once "config.php";
@@ -6,6 +7,8 @@ require_once "config.php";
 $cod_estado = "";
 $fecha_finalizacion = "";
 $fecha_inicio = "";
+$pagado=0;
+$fecha_pago = "";
 $cod_estado_err = "";
 $fecha_finalizacion_err = "";
 $fecha_inicio_err = "";
@@ -17,16 +20,18 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
     $cod_estado = trim($_POST["estado"]);
     $fecha_finalizacion = trim($_POST["fecha_finalizacion"]);
     $fecha_inicio = trim($_POST["fecha_inicio"]);
+    $pagado = trim($_POST["pagado"]);
+    $fecha_pago= trim($_POST["fecha_pago"]);
    
 
     // Check input errors before inserting in database
     if(empty($cod_estado_err) && empty($fecha_finalizacion_err)){
         // Prepare an update statement
-        $sql = "UPDATE SERVICIOS_BRINDADOS SET COD_ESTADO=?, FECHA_FINALIZACION=?, FECHA_INICIO=? WHERE COD_SERVICIO_BRINDADO=?";
+        $sql = "UPDATE SERVICIOS_BRINDADOS SET COD_ESTADO=?, FECHA_FINALIZACION=?, FECHA_INICIO=?, PAGO=?, FECHA_PAGO=? WHERE COD_SERVICIO_BRINDADO=?";
          
         if($stmt = mysqli_prepare($DB_conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt,"issi", $param_cod_estado, $param_fecha_finalizacion, $param_fecha_inicio, $param_cod_servicio_brindado);
+            mysqli_stmt_bind_param($stmt,"issisi", $param_cod_estado, $param_fecha_finalizacion, $param_fecha_inicio, $param_pago, $param_fecha_pago, $param_cod_servicio_brindado);
             
             //Seteamos los parametros
             $param_cod_estado = $cod_estado;
@@ -36,6 +41,12 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
                 $param_fecha_finalizacion = $fecha_finalizacion;
             }
             $param_fecha_inicio = $fecha_inicio;
+            $param_pago = $pagado;
+            if ($fecha_pago == ''){
+                $param_fecha_pago = NULL;
+            }else{
+                $param_fecha_pago = $fecha_pago;
+            }
             $param_cod_servicio_brindado = $COD_SERVICIO_BRINDADO;
 
 
@@ -43,12 +54,9 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
             // Intentamos ejecutar la instruccion
             if(mysqli_stmt_execute($stmt)){
                 // Registro modificado exitosamente, redireccionamos
-                
-                header("location: PRUEBA.php");
-                
-                exit();
+                echo "<script> modificado(1,3); </script>";
             } else{
-                echo"error aca";
+                echo "<script> modificado(0,3); </script>";
             }
         }
          
@@ -86,8 +94,10 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
                     $cod_estado = $row["COD_ESTADO"];
                     $fecha_finalizacion = $row["FECHA_FINALIZACION"];
                     $fecha_inicio = $row["FECHA_INICIO"];
+                    $pagado = $row["PAGO"];
+                    $fecha_pago = $row["FECHA_PAGO"];
                 } else{
-                    // La URL no contiene un COD_SERVICIO VALIDO
+                    // La URL no contiene un COD_SERVICIO_BRINDADO VALIDO
                     header("location: error.php");
                     exit();
                 }
@@ -103,7 +113,7 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
         // Close connection
         mysqli_close($DB_conn);
     }  else{
-        // La URL no contiene un COD_CLIENTE
+        // La URL no contiene un COD_SERVICIO_BRINDADO
         header("location: error.php");
         exit();
     }
@@ -122,9 +132,9 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
                     <p>Porfavor complete el siguiente formulario.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-                        <div class="form-group" id= "estado">
+                        <div class="form-group">
                             <label> Estado 
-                                <select name="estado" class = "form-control <?php echo (!empty($estado_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $estado; ?>" >
+                                <select name="estado" id="estado" class = "form-control <?php echo (!empty($estado_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $estado; ?>" >
                                     <option value="2">En proceso</option>
                                     <option value="1">Finalizado</option>                 
                                 </select>
@@ -137,18 +147,37 @@ if(isset($_POST["COD_SERVICIO_BRINDADO"]) && !empty($_POST["COD_SERVICIO_BRINDAD
                         </div>
                         <div class="form-group">
                             <label>Fecha Finalizacion (si corresponde)</label>
-                            <input type="date" name="fecha_finalizacion" class="form-control <?php echo (!empty($fecha_finalizacion_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $fecha_finalizacion; ?>">
-                            <span class="invalid-feedback"><?php echo $fecha_finalizacion;?></span>
+                            <input type="date" id="fecha_finalizacion"name="fecha_finalizacion" class="form-control <?php echo (!empty($fecha_finalizacion_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $fecha_finalizacion; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Pago</label>
+                            <input type="checkbox" id="pagado" name="pagado"  value="1<?php echo $_POST["pagado"]; ?>" style="border: #bababa 1px solid; color:#000000;" >
+                        </div>
+                        <div>
+                            <Label>Fecha Pago (si corresponde)</Label>
+                            <input type="date" id="fecha_pago" name="fecha_pago" class="form-control <?php echo (!empty($fecha_pago)) ? 'is-invalid' : ''; ?>" value="<?php echo $fecha_pago; ?>">
                         </div>
 
                         <input type="hidden" name="COD_SERVICIO_BRINDADO" value="<?php echo $COD_SERVICIO_BRINDADO; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Aceptar">
-                        <a href="PRUEBA.php" class="btn btn-secondary ml-2">Cancelar</a>
+                        <a href="buscadorserv.php" class="btn btn-secondary ml-2">Cancelar</a>
                     </form>
                 </div>
             </div>        
         </div>
     </div>
 </body>
+<script>
+    document.getElementById("fecha_pago").disabled = true;
+
+    $('#pagado').change(function() {
+        let isChecked = $('#pagado')[0].checked
+        if(isChecked){
+            document.getElementById("fecha_pago").disabled = false;
+        } else{
+            document.getElementById("fecha_pago").disabled = true;
+        }
+    });
+</script>
 
 

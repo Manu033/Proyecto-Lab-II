@@ -1,3 +1,4 @@
+<script type="text/javascript" src="app.js"></script>
 <?php
 // Include config file
 require_once "config.php";
@@ -53,13 +54,11 @@ if(isset($_POST["COD_SERVICIO"]) && !empty($_POST["COD_SERVICIO"])){
             if(mysqli_stmt_execute($stmt)){
                 // Registro creado exitosamente, redireccionamos
                 
-                header("location: serviciosvista.php");
+                echo "<script> modificado(1,0); </script>";
                 
                 exit();
             } else{
-                echo "<script>";
-                echo "validar(0);";
-                echo "</script>";
+                echo "<script> modificado(0,0); </script>";
             }
         }
          

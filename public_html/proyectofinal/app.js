@@ -66,16 +66,19 @@ function redireccionar(exito, lugar){
         alert("Registro creado exitosamente");
         if (lugar===1){
             window.location.href = "clientes.php";
-        }else{
+        }else if(lugar==0){
             window.location.href = "serviciosvista.php";
+        }else{
+            window.location.href = "buscadorserv.php";
         }
-
     } else{
         alert("Algo ha ido mal, intente nuevamente");
         if (lugar==1){
             window.location.href = "clientes.php";
-        }else{
+        }else if(lugar==0){
             window.location.href = "serviciosvista.php";
+        }else{
+            window.location.href = "index.php";
         }
     }
 }
@@ -85,12 +88,35 @@ function modificado(exito,lugar){
         alert("Registro modificado exitosamente");
         if (lugar===1){
             window.location.href = "clientes.php";
+        }else if(lugar==0){
+            window.location.href = "serviciosvista.php";
+        }else{
+            window.location.href = "buscadorserv.php";
+        }
+
+    } else{
+        alert("Algo ha ido mal, intente nuevamente");
+        if (lugar==1){
+            window.location.href = "clientes.php";
+        }else if(lugar==0){
+            window.location.href = "serviciosvista.php";
+        }else{
+            window.location.href = "buscadorserv.php";
+        }
+    }
+}
+
+function eliminado(exito,lugar){
+    if (exito == 1){
+        alert("Registro eliminado correctamente");
+        if (lugar===1){
+            window.location.href = "clientes.php";
         }else{
             window.location.href = "serviciosvista.php";
         }
 
     } else{
-        alert("Algo ha ido mal, intente nuevamente");
+        alert("Revise servicios y pruebe nuevamente");
         if (lugar==1){
             window.location.href = "clientes.php";
         }else{

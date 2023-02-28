@@ -40,3 +40,50 @@ Stack trace:
 [27-Feb-2023 07:48:21 America/New_York] PHP Parse error:  syntax error, unexpected 'Hola' (T_STRING), expecting ';' or ',' in /home/tusrutashoy/public_html/proyectofinal/agregarcliente.php on line 84
 [27-Feb-2023 07:50:07 America/New_York] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in /home/tusrutashoy/public_html/proyectofinal/agregarcliente.php on line 83
 [27-Feb-2023 07:50:24 America/New_York] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in /home/tusrutashoy/public_html/proyectofinal/agregarcliente.php on line 83
+[27-Feb-2023 10:59:28 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/tusrutashoy/public_html/proyectofinal/buscadorserv.php on line 294
+[27-Feb-2023 11:57:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tusrutashoy/public_html/proyectofinal/modcliente.php:1) in /home/tusrutashoy/public_html/proyectofinal/modcliente.php on line 156
+[28-Feb-2023 09:37:35 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 86
+[28-Feb-2023 09:37:35 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 89
+[28-Feb-2023 09:37:35 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 100
+[28-Feb-2023 09:37:35 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 103
+[28-Feb-2023 09:37:35 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 120
+[28-Feb-2023 09:37:35 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 123
+[28-Feb-2023 09:42:37 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 87
+[28-Feb-2023 09:42:37 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 90
+[28-Feb-2023 09:42:37 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 101
+[28-Feb-2023 09:42:37 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 104
+[28-Feb-2023 09:42:37 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 121
+[28-Feb-2023 09:42:37 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/tusrutashoy/public_html/proyectofinal/agregarbrindado.php on line 124
+[28-Feb-2023 10:08:19 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 22
+[28-Feb-2023 14:49:14 America/New_York] PHP Warning:  mysqli_stmt_bind_param(): Number of elements in type definition string doesn't match number of bind variables in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 34
+[28-Feb-2023 14:49:14 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function modificado() in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 60
+[28-Feb-2023 14:53:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function modificado() in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 57
+[28-Feb-2023 14:55:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function modificado() in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 57
+[28-Feb-2023 14:57:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function modificado() in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 57
+[28-Feb-2023 14:57:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function modificado() in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 57
+[28-Feb-2023 14:58:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function modificado() in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/tusrutashoy/public_html/proyectofinal/cambioestado.php on line 57
+[28-Feb-2023 15:07:41 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/tusrutashoy/public_html/proyectofinal/buscadorserv.php on line 305
+[28-Feb-2023 15:08:55 America/New_York] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/tusrutashoy/public_html/proyectofinal/buscadorserv.php on line 305
+[28-Feb-2023 15:09:26 America/New_York] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/tusrutashoy/public_html/proyectofinal/buscadorserv.php on line 305
+[28-Feb-2023 15:09:42 America/New_York] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /home/tusrutashoy/public_html/proyectofinal/buscadorserv.php on line 305
+[28-Feb-2023 15:27:07 America/New_York] PHP Warning:  include(buscadorservindex.php): failed to open stream: No such file or directory in /home/tusrutashoy/public_html/proyectofinal/index.php on line 49
+[28-Feb-2023 15:27:07 America/New_York] PHP Warning:  include(buscadorservindex.php): failed to open stream: No such file or directory in /home/tusrutashoy/public_html/proyectofinal/index.php on line 49
+[28-Feb-2023 15:27:07 America/New_York] PHP Warning:  include(): Failed opening 'buscadorservindex.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/tusrutashoy/public_html/proyectofinal/index.php on line 49

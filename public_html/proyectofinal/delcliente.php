@@ -1,3 +1,5 @@
+<script type="text/javascript" src="app.js"></script>
+
 <?php
 // Process delete operation after confirmation
 if(isset($_POST["COD_CLIENTE"]) && !empty($_POST["COD_CLIENTE"])){
@@ -17,10 +19,10 @@ if(isset($_POST["COD_CLIENTE"]) && !empty($_POST["COD_CLIENTE"])){
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
             // Records deleted successfully. Redirect to landing page
-            header("location: clientes.php");
+            echo "<script> eliminado(1,1); </script>";
             exit();
         } else{
-            echo "Algo ha ido mal. Intente nuevamente.";
+            echo "<script> eliminado(0,1); </script>";
         }
     }
      

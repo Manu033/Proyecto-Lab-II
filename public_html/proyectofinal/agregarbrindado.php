@@ -1,3 +1,4 @@
+<script type="text/javascript" src="app.js"></script>
 <?php
 //Incluir archivo config para coneccion BD
 require_once "config.php";
@@ -38,7 +39,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             //Seteamos los parametros
             $param_cod_cliente = $cliente;
             $param_cod_servicio = $servicio;
-            $param_fecha_inicio = $fecha_inicio;
+            // $param_fecha_inicio = $fecha_inicio;
+            if ($fecha_inicio == ''){
+                $param_fecha_inicio = NULL;
+            }else{
+                $param_fecha_inicio = $fecha_inicio;
+            }
             $param_cod_estado = $estado;
             $param_observaciones = $observaciones;
             $param_patente = $patente;
@@ -46,10 +52,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Intentamos ejecutar la instruccion
             if(mysqli_stmt_execute($stmt)){
                 // Registro creado exitosamente, redireccionamos
-                header("location: index.php");
+                echo "<script> redireccionar(1,3); </script>";
                 exit();
             } else{
-                echo "Algo ha ido mal. Intente neuvamente";
+                echo "<script> redireccionar(0,3); </script>";
             }
         }
 
